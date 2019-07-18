@@ -1,9 +1,8 @@
 Gem-Licenses
 ============
 
-[![Build Status](https://travis-ci.org/dblock/gem-licenses.svg)](https://travis-ci.org/dblock/gem-licenses)
-
 Gem-licenses is an attempt to collect license information from project's gems. Similar to [3licenses](https://github.com/dblock/3licenses).
+This fork aims to provide additional information such as copyrights.
 
 Motivation
 ==========
@@ -21,7 +20,7 @@ Include gem-licenses in your project's Gemfile.
 
 ```ruby
 group :development, :test do
-  gem 'gem-licenses'
+  gem 'gem-licenses', path: path: <gem-licenses_folder_path>
 end
 ```
 
@@ -42,6 +41,11 @@ To write a CSV file of gems + licenses.
 
 ```shell
 rake gem:licenses:csv['licenses.csv']
+```
+
+To write a CSV file of gems + licenses + copyrights.
+```shell
+rake gem:licenses:copyrights:csv['licenses.csv']
 ```
 
 Contributing
